@@ -17,6 +17,7 @@ Wanderlust Reads is a Flask-driven book application that uses Wikipedia API for 
 
 # Book Chatbot
 This project implements a Book Chatbot that utilizes various libraries and API to provide information about books based on user queries. Below is an overview of its features, functionalities, and how to use it effectively.
+## Output Display Example = DEMON SLAYER MANGA :
 
 ![image](https://github.com/areeba0/Book-Search---Recommendation-System-with-HTML-CSS--JS-Wikipedia-API-Flask----Collaborative-Filtering/assets/136759791/ba23dcf3-0fb8-40b2-b22e-31d2292af7ed)
 
@@ -34,9 +35,6 @@ This project implements a Book Chatbot that utilizes various libraries and API t
 ### Image Retrieval:
 - Fetches multiple book cover images from Google Images API using BeautifulSoup for web scraping.
 - Downloads and saves the images locally for display.
-  
-## Output Display Example = DEMON SLAYER MANGA :
-Formats and displays the retrieved book information and images.
 
 # Book Recommendation System
 ## Overview
