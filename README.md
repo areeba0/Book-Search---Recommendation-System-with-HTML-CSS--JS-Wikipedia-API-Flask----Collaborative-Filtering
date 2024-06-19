@@ -71,5 +71,37 @@ The following Python libraries are utilized in this project:
 15) pickle: Serializes and deserializes Python objects.
 #### Installation: Comes with the standard library.
 
+# Book Recommendation System
+## Overview
+This project implements a book recommendation system based on collaborative filtering using the k-nearest neighbors algorithm (k-NN). The system recommends books similar to a given book using user ratings data.
+
+- Book Recommendation: Given a book title, the system recommends similar books based on user ratings.
+- Model Persistence: The trained k-NN model and recommendation function are saved using pickle for easy reuse.
+- Data Cleaning: The dataset was cleaned to handle CSV file inconsistencies before loading into the system.
+- Dataset: Utilizes the Book-Crossings dataset, containing user ratings of books.
+### Model Used = 
+- Nearest Neighbors Algorithm: The k-NN algorithm with cosine similarity metric.
+  
+# Book Chatbot
+This project implements a Book Chatbot that utilizes various libraries and API to provide information about books based on user queries. Below is an overview of its features, functionalities, and how to use it effectively.
+
+## Features
+### Text Preprocessing:
+- Converts user input to lowercase.
+- Performs spell-checking and correction for English words using TextBlob and SpellChecker.
+  
+### Book Information Retrieval:
+- Uses wikipedia library to fetch content about a book.
+- Extracts relevant sections based on user query using regular expressions.
+
+### Image Retrieval:
+- Fetches multiple book cover images from Google Images API using BeautifulSoup for web scraping.
+- Downloads and saves the images locally for display.
+## Output Display:
+Formats and displays the retrieved book information and images.
+
+
+# ADDITIONAL NOTE=
+The front end for image retrieval from the Google Images API  has not been implemented yet, only the backend.
 
 
