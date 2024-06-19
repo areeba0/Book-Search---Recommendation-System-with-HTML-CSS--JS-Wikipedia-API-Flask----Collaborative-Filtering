@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Emilys Candy', cursive;
+            background-color: #F2E5D3; /* Champagne */
+        }
+
+        .green-band {
+            background-color: #6F927F; /* Cactus green */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header-text {
+            color: #FFFFFF; /* White */
+        }
+
+        .special-text {
+            color: #F2E5D3; /* Champagne */
+        }
+
+        .navbar {
+            background-color: #F2E5D3; /* Champagne */
+            text-align: center;
+        }
+
+        .navbar-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 5px 30px;
+            color: black; /* White */
+            text-decoration: none;
+            border: 4px solid #FFFFFF; /* White */
+            border-radius: 20px;
+            margin: 0 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: #4C704E; /* Darker green */
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #6F927F; /* Cactus green */
+            border: 2px solid #FFFFFF; /* White */
+            border-radius: 20px;
+            padding: 5px 0;
+            display: none;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-link {
+            display: block;
+            padding: 10px 20px;
+            color: #FFFFFF; /* White */
+            text-decoration: none;
+            border-radius: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dropdown-link:hover {
+            background-color: #4C704E; /* Darker green */
+        }
+
+      
+        .background-section {
+    background-image: url('https://i.pinimg.com/564x/48/97/4c/48974cf7cf687814b253052c108d3453.jpg');
+    background-size: 100% 100%; /* Cover the entire viewport */
+    background-position: cover;
+    background-attachment: fixed; /* Fix the background image in place */
+    height: 700px; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #E07D45; /* Text color on the background image */
+    text-align: center;
+    font-size: 95px;
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white, 0 0 60px white;
+}
+
+
+        .romantic-font {
+            font-family: 'Great Vibes', cursive;
+        }
+        
+          /* Bestseller Section */
+/* Bestseller Section */
+.bestseller-section {
+    background-color: #F2E5D3; /* Champagne */
+    text-align: center;
+    padding: 50px 0;
+}
+
+.bestseller-title {
+    font-family: 'Emilys Candy', cursive;
+    color: Orange;
+    font-size: 46px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white, 0 0 60px white;
+}
+
+.bestseller-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.bestseller-box {
+    width: 80%;
+    height: 770px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 2px grey; /* Shadow */
+    overflow: hidden;
+    position: relative;
+    margin : 5px  auto;
+
+    padding : 5px 0px;
+}
+
+.bestseller-box img {
+    width: 90%;
+    height: 74%;
+    object-fit: cover;
+    margin-top: 13px;
+}
+
+.bestseller-box h3, .bestseller-box p, .bestseller-box .price {
+    margin: 10px;
+    font-size: 18px;
+}
+
+.rating {
+    color: #F2E5D3; /* Champagne */
+    margin-bottom: 5px;
+}
+
+.star {
+    color: gold;
+    font-size: 20px;
+}
+
+.add-to-cart {
+    background: linear-gradient(to right, #6F927F, #4C704E);
+    color: white; /* Set text color to white */
+    padding: 10px 28px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.add-to-cart:hover {
+    background: green; /* Darker green */
+}
+
+
+        
+  </style>
+</head>
+<body>
+    <header class="green-band">
+        <h1 class="header-text"><a href="HOME.html" style="text-decoration: none; color: inherit; cursor: pointer;">Wanderlust Reads<span class="special-text">ˏˋ°•*⁀➷</span></a></h1>
+    </header>
+
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li><a href="HOME.html" class="nav-link">Home</a></li>
+            <li><a href="Search.html" class="nav-link">Search</a></li>
+            <li><a href="Recommendation.html" class="nav-link">Recommendations</a></li>
+            <li class="dropdown">
+                <a href="#" class="nav-link">Genre</a>
+                <ul class="dropdown-menu">
+                    <li><a href="Self_help" class="dropdown-link">Self-Help</a></li>
+                    <li><a href="Romance.html" class="dropdown-link">Romance</a></li>
+                    <li><a href="Fantasy.html" class="dropdown-link">Fantasy</a></li>
+                    <li><a href="Comics.html" class="dropdown-link">Comics</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- New section with background image -->
+    <section class="background-section">
+        <h2 class="romantic-font"> Comics </h2>
+    </section>
+    <!-- Bestseller Section -->
+<section class="bestseller-section">
+    <h2 class="bestseller-title"> Comics(American) - Manga(Japanese) - Manhwa(Korean)</h2>
+    <div class="bestseller-container">
+        <!-- Book 1 -->
+        <div class="bestseller-box">
+            <img src="https://i.pinimg.com/564x/db/3a/0c/db3a0c2ecc801dce5650b960b5c1f90c.jpg" alt="Book 1">
+            <h3>The Amazing Spiderman</h3>
+            <p>Marvel comics</p>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+            </div>
+            <p class="price">$19.99</p>
+            <button class="add-to-cart" ><a href="add_to_cart.html" class="add-to-cart">Add to Cart</a></button>
+        </div>
+         <!-- Book 3 -->
+         <div class="bestseller-box">
+            <img src="https://i.pinimg.com/564x/0f/22/0f/0f220f8cd8c8613fafbdf6ee7582c835.jpg " alt="Book 3">
+            <h3>Solo Leveling </h3>
+            <p> Manhwa Comics</p>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+            </div>
+            <p class="price">$29.99</p>
+            <button class="add-to-cart" ><a href="add_to_cart.html" class="add-to-cart">Add to Cart</a></button>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="bestseller-box">
+            <img src="https://i.pinimg.com/564x/60/0f/6c/600f6cde1a36d4e44ccf72c7e4d849da.jpg" alt="Book 2">
+            <h3>Iron Man</h3>
+            <p>Marvel comics</p>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+            </div>
+            <p class="price">$24.99</p>
+            <button class="add-to-cart" ><a href="add_to_cart.html" class="add-to-cart">Add to Cart</a></button>
+        </div>
+
+       
+    </div>
+    <div class="bestseller-container">
+        <!-- Book 1 -->
+        <div class="bestseller-box">
+            <img src="https://i.pinimg.com/564x/f9/42/2d/f9422d8d1185447aff4edf6c72143897.jpg" alt="Book 1">
+            <h3>The Promised Neverland</h3>
+            <p>Manga</p>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+            </div>
+            <p class="price">$19.99</p>
+            <button class="add-to-cart" ><a href="add_to_cart.html" class="add-to-cart">Add to Cart</a></button>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="bestseller-box">
+            <img src="https://i.pinimg.com/564x/95/91/0c/95910cdecbc24f91f24be9ec24765619.jpg" alt="Book 2">
+            <h3>Blue Period</h3>
+            <p>Manga</p>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+            </div>
+            <p class="price">$24.99</p>
+            <button class="add-to-cart" ><a href="add_to_cart.html" class="add-to-cart">Add to Cart</a></button>
+        </div>
+
+        <!-- Book 3 -->
+        <div class="bestseller-box">
+            <img src="https://i.pinimg.com/564x/5c/d7/29/5cd72934c3fb4a4d3c067b4b7fc900a4.jpg" alt="Book 3">
+            <h3>Mystc Messengers</h3>
+            <p>Manhwa Comic</p>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+            </div>
+            <p class="price">$29.99</p>
+            <button class="add-to-cart" ><a href="add_to_cart.html" class="add-to-cart">Add to Cart</a></button>
+        </div>
+    </div>
+    <div class="bestseller-container">
+        <!-- Book 1 -->
+        <div class="bestseller-box">
+            <img src="https://i.pinimg.com/564x/47/19/20/471920b7b5b1710414bcfb95ebf45509.jpg" alt="Book 1">
+            <h3>Tokyo Revengers</h3>
+            <p>Manga</p>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+            </div>
+            <p class="price">$19.99</p>
+            <button class="add-to-cart" ><a href="add_to_cart.html" class="add-to-cart">Add to Cart</a></button>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="bestseller-box">
+            <img src= "https://i.pinimg.com/564x/0a/31/d0/0a31d03e41f54bbad0eb1a0deb4b543f.jpg" alt="Book 2">
+            <h3>Maybe Meant To Be </h3>
+            <p>Manhwa Comics</p>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+            </div>
+            <p class="price">$24.99</p>
+            <button class="add-to-cart" ><a href="add_to_cart.html" class="add-to-cart">Add to Cart</a></button>
+        </div>
+
+        <!-- Book 3 -->
+        <div class="bestseller-box">
+            <img src="https://i.pinimg.com/564x/3e/ff/4b/3eff4bb2e1ee97ec9bcc81cbae7d44e5.jpg" alt="Book 3">
+            <h3> Doctor Strange</h3>
+            <p>Marvel Comics</p>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+            </div>
+            <p class="price">$29.99</p>
+            <button class="add-to-cart" ><a href="add_to_cart.html" class="add-to-cart">Add to Cart</a></button>
+        </div>
+    </div>
+</section>
+    </body>
+</html>

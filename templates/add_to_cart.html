@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Emilys Candy', cursive;
+            background-color: #F2E5D3; /* Champagne */
+        }
+
+        .green-band {
+            background-color: #6F927F; /* Cactus green */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header-text {
+            color: #FFFFFF; /* White */
+        }
+
+        .special-text {
+            color: #F2E5D3; /* Champagne */
+        }
+
+        .navbar {
+            background-color: #F2E5D3; /* Champagne */
+            text-align: center;
+        }
+
+        .navbar-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 5px 30px;
+            color: black; /* White */
+            text-decoration: none;
+            border: 4px solid #FFFFFF; /* White */
+            border-radius: 20px;
+            margin: 0 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: #4C704E; /* Darker green */
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #6F927F; /* Cactus green */
+            border: 2px solid #FFFFFF; /* White */
+            border-radius: 20px;
+            padding: 5px 0;
+            display: none;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-link {
+            display: block;
+            padding: 10px 20px;
+            color: #FFFFFF; /* White */
+            text-decoration: none;
+            border-radius: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dropdown-link:hover {
+            background-color: #4C704E; /* Darker green */
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto; /* Adjusted margin */
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 2px grey; /* Shadow */
+        }
+
+        .form-input {
+            margin-bottom: 20px;
+            width: calc(100% - 20px); /* Adjusted width */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-button {
+            background: linear-gradient(to right, #6F927F, #4C704E);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-button:hover {
+            background: #4C704E; /* Darker green */
+        }
+
+        .form-title {
+            text-align: center;
+            font-family: 'Great Vibes', cursive;
+            color: #6F927F; /* Cactus green */
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="green-band">
+        <h1 class="header-text"><a href="HOME.html" style="text-decoration: none; color: inherit; cursor: pointer;">Wanderlust Reads<span class="special-text">ˏˋ°•*⁀➷</span></a></h1>
+    </header>
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li><a href="HOME.html" class="nav-link">Home</a></li>
+            <li><a href="Search.html" class="nav-link">Search</a></li>
+            <li><a href="Recommendation.html" class="nav-link">Recommendations</a></li>
+            <li class="dropdown">
+                <a href="#" class="nav-link">Genre</a>
+                <ul class="dropdown-menu">
+                    <li><a href="Self_help" class="dropdown-link">Self-Help</a></li>
+                    <li><a href="Romance.html" class="dropdown-link">Romance</a></li>
+                    <li><a href="Fantasy.html" class="dropdown-link">Fantasy</a></li>
+                    <li><a href="Comics.html" class="dropdown-link">Comics</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="form-container">
+        <h2 class="form-title">Add to Cart & Place Order</h2>
+        <form action="#" method="POST" id="orderForm" onsubmit="return validateForm()">
+            <input type="text" class="form-input" name="username" id="username" placeholder="Username (at least 5 characters, alphanumeric)" required>
+            <input type="password" class="form-input" name="password" id="password" placeholder="Password (at least 8 characters, one uppercase, one lowercase, one number, one special character)" required>
+            <input type="password" class="form-input" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
+            <input type="text" class="form-input" name="first_name" id="first_name" placeholder="First Name" required>
+            <input type="text" class="form-input" name="last_name" id="last_name" placeholder="Last Name" required>
+            <input type="text" class="form-input" name="address" id="address" placeholder="Address" required>
+            <input type="email" class="form-input" name="email" id="email" placeholder="Email" required>
+            <textarea class="form-input" name="extra_notes" id="extra_notes" placeholder="Extra Notes"></textarea>
+            <input type="text" class="form-input" name="country" id="country" placeholder="Country (alphabets only)" required>
+            <input type="text" class="form-input" name="postal_code" id="postal_code" placeholder="Postal Code (e.g., 12345 or 12345-6789)" required>
+            <p>Cash on Delivery</p>
+            <button type="submit" class="form-button">Place Order</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var confirm_password = document.getElementById("confirm_password").value;
+            var first_name = document.getElementById("first_name").value;
+            var last_name = document.getElementById("last_name").value;
+            var address = document.getElementById("address").value;
+            var email = document.getElementById("email").value;
+            var extra_notes = document.getElementById("extra_notes").value;
+            var country = document.getElementById("country").value;
+            var postal_code = document.getElementById("postal_code").value;
+
+            var usernameRegex = /^[a-zA-Z0-9]{5,}$/;
+            var passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var countryRegex = /^[a-zA-Z\s]+$/;
+            var postalCodeRegex = /^\d{5}(?:[-\s]\d{4})?$/;
+
+            if (!username.match(usernameRegex)) {
+                alert("Username must be at least 5 characters long and contain only alphanumeric characters.");
+                return false;
+            }
+
+            if (!password.match(passwordRegex)) {
+                alert("Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character.");
+                return false;
+            }
+
+            if (password !== confirm_password) {
+                alert("Passwords do not match!");
+                return false;
+            }
+
+            if (!country.match(countryRegex)) {
+                alert("Country name should contain only alphabets.");
+                return false;
+            }
+
+            if (!postal_code.match(postalCodeRegex)) {
+                alert("Postal code format should be either '12345' or '12345-6789'.");
+                return false;
+            }
+
+            if (!email.match(emailRegex)) {
+                alert("Invalid email format.");
+                return false;
+            }
+
+            saveToFile();
+            return true;
+        }
+
+        function generateOrderId() {
+            return 'ORD' + Date.now();
+        }
+
+        function saveToFile() {
+            var formData = {
+                username: document.getElementById("username").value,
+                password: document.getElementById("password").value,
+                first_name: document.getElementById("first_name").value,
+                last_name: document.getElementById("last_name").value,
+                address: document.getElementById("address").value,
+                email: document.getElementById("email").value,
+                extra_notes: document.getElementById("extra_notes").value,
+                country: document.getElementById("country").value,
+                postal_code: document.getElementById("postal_code").value,
+                order_id: generateOrderId()
+            };
+
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        var existingData = JSON.parse(xhr.responseText);
+                        existingData.push(formData);
+                        saveDataToFile(existingData);
+                    } else {
+                        saveDataToFile([formData]);
+                    }
+                }
+            };
+            xhr.open("GET", "order_data.json", true);
+            xhr.send();
+        }
+
+        function saveDataToFile(data) {
+            var dataStr = JSON.stringify(data);
+            var blob = new Blob([dataStr], { type: 'application/json' });
+            var a = document.createElement("a");
+            var url = window.URL.createObjectURL(blob);
+            a.href = url;
+            a.download = "order_data.json";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+            showCongratulations(data[data.length - 1].first_name, data[data.length - 1].last_name, data[data.length - 1].order_id);
+        }
+
+        function showCongratulations(firstName, lastName, orderId) {
+            alert("Congratulations " + firstName + " " + lastName + ", your order has been placed with the order ID: " + orderId);
+        }
+    </script>
+</body>
+</html>

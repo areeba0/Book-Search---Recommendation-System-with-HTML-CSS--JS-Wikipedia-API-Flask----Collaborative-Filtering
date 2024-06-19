@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Emilys Candy', cursive;
+            background-color: #F2E5D3; /* Champagne */
+        }
+
+        .green-band {
+            background-color: #6F927F; /* Cactus green */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header-text {
+            color: #FFFFFF; /* White */
+        }
+
+        .special-text {
+            color: #F2E5D3; /* Champagne */
+        }
+
+        .navbar {
+            background-color: #F2E5D3; /* Champagne */
+            text-align: center;
+        }
+
+        .navbar-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 5px 30px;
+            color: black; /* White */
+            text-decoration: none;
+            border: 4px solid #FFFFFF; /* White */
+            border-radius: 20px;
+            margin: 0 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: #4C704E; /* Darker green */
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #6F927F; /* Cactus green */
+            border: 2px solid #FFFFFF; /* White */
+            border-radius: 20px;
+            padding: 5px 0;
+            display: none;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-link {
+            display: block;
+            padding: 10px 20px;
+            color: #FFFFFF; /* White */
+            text-decoration: none;
+            border-radius: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dropdown-link:hover {
+            background-color: #4C704E; /* Darker green */
+        }
+
+          /* New section with background image */
+          .background-section {
+            background-image: url('https://i.pinimg.com/originals/2f/ab/f3/2fabf3ceb5a35b51a70e27137d56e4d2.gif');
+            background-size: cover;
+            background-position: center;
+            height: 700px; /* Adjust the height as needed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white; /* Text color on the background image */
+            text-align: center;
+            font-size: 68px;
+            text-shadow: 0 0 10px Orange, 0 0 20px Orange, 0 0 30px Orange, 0 0 40px Orange, 0 0 50px Orange, 0 0 60px Orange;
+        }
+
+        .romantic-font {
+            font-family: 'Great Vibes', cursive;
+        }
+
+        /* Announcement Section */
+        .announcement-section {
+            background-color: #F2E5D3; /* Champagne */
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .announcement-title {
+            font-family: 'Emilys Candy', cursive;
+            color: Orange;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .announcement-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .announcement-box {
+            width: 30%;
+            height: 200px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 2px grey; /* Cactus green */
+            color : #A96255 ;
+        }
+        /* Bestseller Section */
+/* Bestseller Section */
+.bestseller-section {
+    background-color: #F2E5D3; /* Champagne */
+    text-align: center;
+    padding: 50px 0;
+}
+
+.bestseller-title {
+    font-family: 'Emilys Candy', cursive;
+    color: Orange;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.bestseller-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.bestseller-box {
+    width: 80%;
+    height: 770px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 2px grey; /* Shadow */
+    overflow: hidden;
+    position: relative;
+    margin : 5px  auto;
+
+    padding : 5px 0px;
+}
+
+.bestseller-box img {
+    width: 90%;
+    height: 74%;
+    object-fit: cover;
+    margin-top: 13px;
+}
+
+.bestseller-box h3, .bestseller-box p, .bestseller-box .price, .bestseller-box .genre {
+    margin: 5px;
+    font-size: 18px;
+  
+}
+
+.rating {
+    color: #F2E5D3; /* Champagne */
+    margin-bottom: 5px;
+}
+
+.star {
+    color: gold;
+    font-size: 20px;
+}
+
+.add-to-cart {
+    background: linear-gradient(to right, #6F927F, #4C704E);
+    color: white; /* Set text color to white */
+    padding: 10px 28px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.add-to-cart:hover {
+    background: green; /* Darker green */
+}
+
+.see-more-link {
+    position: absolute;
+    
+    right: 10px;
+    color: black; /* Darker green */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+  /* Contact Section Styles */
+    .contact-section {
+      background-color: #f0f0f0;;
+      color: black;
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .contact-form input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .contact-form input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    .error {
+      color: red;
+      margin-top: 5px;
+    }
+      footer {
+      background-color: black;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .footer-links li a {
+  color: white;
+
+    </style>
+</head>
+<body>
+    <header class="green-band">
+        <h1 class="header-text"><a href="HOME.html" style="text-decoration: none; color: inherit; cursor: pointer;">Wanderlust Reads<span class="special-text">ˏˋ°•*⁀➷</span></a></h1>
+    </header>
+
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li><a href="HOME.html" class="nav-link">Home</a></li>
+            <li><a href="Search.html" class="nav-link">Search</a></li>
+            <li><a href="Recommendation.html" class="nav-link">Recommendations</a></li>
+            <li class="dropdown">
+                <a href="#" class="nav-link">Genre</a>
+                <ul class="dropdown-menu">
+                    <li><a href="Self_help" class="dropdown-link">Self-Help</a></li>
+                    <li><a href="Romance.html" class="dropdown-link">Romance</a></li>
+                    <li><a href="Fantasy.html" class="dropdown-link">Fantasy</a></li>
+                    <li><a href="Comics.html" class="dropdown-link">Comics</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- New section with background image -->
+    <section class="background-section">
+        <h2 class="romantic-font">Where      Every     Page     Finds     A     Home</h2>
+    </section>
+
+    <!-- Announcement Section -->
+<section class="announcement-section">
+    <h2 class="announcement-title">Book Announcements</h2>
+    <div class="announcement-container">
+        <div class="announcement-box">
+            <h3>Exciting New Release!</h3>
+            <p>Check out our latest fantasy novel, "The Kingdom of Shadows", now available in stores!</p>
+        </div>
+        <div class="announcement-box">
+            <h3>Special Limited Edition!</h3>
+            <p>Introducing the collector's edition of "The Great Escape" with exclusive bonus content!</p>
+        </div>
+        <div class="announcement-box">
+            <h3>Upcoming Author Event!</h3>
+            <p>Meet bestselling author Jane Doe for a book signing event at our bookstore on May 15th!</p>
+        </div>
+    </div>
+</section>
+<!-- Bestseller Section -->
+<section class="bestseller-section">
+  
+    <h2 class="bestseller-title">Bestsellers <a href="#" class="see-more-link">SEE MORE</a></h2>
+    <div class="bestseller-container">
+        <!-- Book 1 -->
+        <div class="bestseller-box">
+            <img src="https://i.pinimg.com/564x/37/97/50/379750efa40c57fa9b00d849d232b452.jpg" alt="Book 1">
+            <h3>Book Name 1</h3>
+            <p>Author Name 1</p>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+            </div>
+            <p class="price">$22.99</p>
+            <p class="genre">Self-Help</p>
+            <!-- Add to Cart button -->
+            <button class="add-to-cart" ><a href="add_to_cart.html" class="add-to-cart">Add to Cart</a></button>
+
+
+<!-- Romance option in the navbar -->
+<li><a href="Romance.html" class="nav-link">Romance</a></li>
+
+        </div>
+
+        <!-- Book 2 -->
+        <div class="bestseller-box">
+            <img src="https://i.pinimg.com/564x/4e/d8/4d/4ed84df901474623ee704a2937e60163.jpg" alt="Book 2">
+            <h3>Book Name 2</h3>
+            <p>Author Name 2</p>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+            </div>
+            <p class="price">$34.99</p>
+            <p class="genre">Romance</p>
+            <button class="add-to-cart" ><a href="add_to_cart.html" class="add-to-cart">Add to Cart</a></button>
+        </div>
+
+        <!-- Book 3 -->
+        <div class="bestseller-box">
+            <img src="https://i.pinimg.com/564x/54/d2/fd/54d2fd1de472264b658a4a5915e57061.jpg" alt="Book 3">
+            <h3>The Chronicles of Narnia</h3>
+            <p>Author Name 3</p>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+            </div>
+            <p class="price">$11.99</p>
+            <p class="genre">Romance</p>
+            <button class="add-to-cart" ><a href="add_to_cart.html" class="add-to-cart">Add to Cart</a></button>
+        </div>
+    </div>
+    <div class="bestseller-container">
+        <!-- Book 1 -->
+        <div class="bestseller-box">
+            <img src="https://i.pinimg.com/564x/f6/18/eb/f618ebe3d60c51a84e92f2057161cb3c.jpg" alt="Book 1">
+            <h3>Book Name 1</h3>
+            <p>Author Name 1</p>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+            </div>
+            <p class="price">$22.99</p>
+            <p class="genre">Self help</p>
+            <button class="add-to-cart" ><a href="add_to_cart.html" class="add-to-cart">Add to Cart</a></button>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="bestseller-box">
+            <img src="https://i.pinimg.com/564x/4a/43/75/4a437562671f9418124a1f9ad4e9d535.jpg" alt="Book 2">
+            <h3>Book Name 2</h3>
+            <p>Author Name 2</p>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+            </div>
+            <p class="price">$19.99</p>
+            <p class="genre">Fantasy</p>
+            <button class="add-to-cart" ><a href="add_to_cart.html" class="add-to-cart">Add to Cart</a></button>
+        </div>
+
+        <!-- Book 3 -->
+        <div class="bestseller-box">
+            <img src="https://i.pinimg.com/564x/f9/62/e6/f962e6d13e5e8ff2f161b519731a56af.jpg" alt="Book 3">
+            <h3>The Chronicles of Narnia</h3>
+            <p>Author Name 3</p>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+            </div>
+            <p class="price">$19.99</p>
+            <p class="genre">Fantasy</p>
+            <button class="add-to-cart" ><a href="add_to_cart.html" class="add-to-cart">Add to Cart</a></button>
+        </div>  
+    </div>
+    <div class="bestseller-container">
+        <!-- Book 1 -->
+        <div class="bestseller-box">
+            <img src="https://i.pinimg.com/564x/bd/ee/ba/bdeeba51acb4fc6996caab8d5b524b5e.jpg" alt="Book 1">
+            <h3>Book Name 1</h3>
+            <p>Author Name 1</p>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+            </div>
+            <p class="price">$22.99</p>
+            <p class="genre">Self Help</p>
+            <button class="add-to-cart" ><a href="add_to_cart.html" class="add-to-cart">Add to Cart</a></button>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="bestseller-box">
+            <img src="https://i.pinimg.com/736x/14/66/c3/1466c357032442695c6eca0d390eaab8.jpg" alt="Book 2">
+            <h3>Book Name 2</h3>
+            <p>Author Name 2</p>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+            </div>
+            <p class="price">$11.99</p>
+            <p class="genre">Romance</p>
+            <button class="add-to-cart" ><a href="add_to_cart.html" class="add-to-cart">Add to Cart</a></button>
+        </div>
+
+        <!-- Book 3 -->
+        <div class="bestseller-box">
+            <img src="https://i.pinimg.com/736x/c4/b3/6b/c4b36b560412545e6a71927ff3c46aeb.jpg" alt="Book 3">
+            <h3>The Chronicles of Narnia</h3>
+            <p>Author Name 3</p>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+            </div>
+            <p class="price">$11.99</p>
+            <p class="genre">Comic</p>
+            <button class="add-to-cart" ><a href="add_to_cart.html" class="add-to-cart">Add to Cart</a></button>
+        </div>  
+    </div>
+</section>
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="contact-form">
+        <form id="contactForm">
+          <input type="text" id="name" name="name" placeholder="Your Name">
+          <div class="error" id="nameError"></div>
+          <input type="email" id="email" name="email" placeholder="Your Email">
+          <div class="error" id="emailError"></div>
+          <input type="text" id="subject" name="subject" placeholder="Subject">
+          <div class="error" id="subjectError"></div>
+          <textarea id="message" name="message" placeholder="Your Message"></textarea>
+          <div class="error" id="messageError"></div>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </section>
+ <footer>
+  <div class="container">
+    <p>&copy; 2024 Farewell Party Management System. All Rights Reserved.</p>
+    <ul class="footer-links">
+      <li><a href="#" style="color: white;">Privacy Policy</a></li>
+      <li><a href="#" style="color: white;">Terms of Service</a></li>
+      <li><a href="#" style="color: white;">Contact Us</a></li>
+    </ul>
+ 
+  </div>
+</footer>
+
+
+  <script>
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Reset errors
+      document.getElementById('nameError').textContent = '';
+      document.getElementById('emailError').textContent = '';
+      document.getElementById('subjectError').textContent = '';
+      document.getElementById('messageError').textContent = '';
+
+      // Validation
+      let isValid = true;
+      const name = form['name'].value.trim();
+      const email = form['email'].value.trim();
+      const subject = form['subject'].value.trim();
+      const message = form['message'].value.trim();
+
+      if (name === '') {
+        document.getElementById('nameError').textContent = 'Name is required';
+        isValid = false;
+      }
+
+      if (email === '') {
+        document.getElementById('emailError').textContent = 'Email is required';
+        isValid = false;
+      } else if (!isValidEmail(email)) {
+        document.getElementById('emailError').textContent = 'Invalid email';
+        isValid = false;
+      }
+
+      if (subject === '') {
+        document.getElementById('subjectError').textContent = 'Subject is required';
+        isValid = false;
+      }
+
+      if (message === '') {
+        document.getElementById('messageError').textContent = 'Message is required';
+        isValid = false;
+      }
+
+      if (isValid) {
+        // Send the form data (Not implemented in this example)
+        alert('Form submitted successfully!');
+        form.reset();
+      }
+    });
+
+    function isValidEmail(email) {
+      // Simple email validation
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    }
+   
+  </script>
+</body>
+</html>
