@@ -1,0 +1,15 @@
+wikipedia-api
+textblob
+pyspellchecker
+requests
+beautifulsoup4
+nbformat
+nbconvert
+flask
+pillow
+matplotlib
+numpy
+pandas
+scipy
+scikit-learn
+
